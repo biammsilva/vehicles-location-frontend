@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $secondary_color;
+    height: 100px;
+    width: 100vw;
+
+    &-logo {
+        padding: 5px 30px;
+        width: 150px;
+        height: 75px;
+        float: left;
+    }
+
+    &-title {
+        font-size: 32px;
+        color: #fff;
+        padding: 30px;
+    }
+}

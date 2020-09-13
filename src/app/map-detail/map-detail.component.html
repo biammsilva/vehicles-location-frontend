@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="map" *ngIf="locations">
+      <agm-map 
+        [latitude]="locations[locations.length-1].lat"
+        [zoom]="zoom"
+        [longitude]="locations[locations.length-1].lng">
+        <agm-marker
+          [latitude]="locations[locations.length-1].lat"
+          [longitude]="locations[locations.length-1].lng"
+          iconAnchorX="5"
+          iconAnchorY="5"
+          [markerClickable]="true"
+          iconUrl="../../assets/images/car.png">
+        </agm-marker>
+        <agm-direction
+          [waypoints]="locationsParsed"
+          [origin]="locationsParsed[0]"
+          [destination]="locationsParsed[locationsParsed.length-1]"
+          [markerOptions]="markerOptions">
+        </agm-direction>
+      </agm-map>
+    </div>
+  </div>
+  
