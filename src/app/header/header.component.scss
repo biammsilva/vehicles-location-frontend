@@ -22,3 +22,29 @@
         padding: 30px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: $secondary_color;
+        height: 90px;
+        width: 100vw;
+        z-index: 100;
+    
+        &-logo {
+            padding: 20px 11px 23px 5px;
+            width: 80px;
+            height: 47px;
+            float: left;
+        }
+    
+        &-title {
+            font-size: 21px;
+            color: #fff;
+            padding: 33px;
+            text-align: center;
+        }
+    }
+}
