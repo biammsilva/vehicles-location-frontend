@@ -23,3 +23,25 @@ agm-map {
     max-width: 1200px;
     height: 100%;
 }
+
+.button-back {
+    position: relative;
+    margin: 1em;
+    font-weight: 100;
+    padding: 1em 1.25em;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    background: $primary-color;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    
+    &:hover {
+      background: darken($primary-color,2.5%);
+    }
+}
