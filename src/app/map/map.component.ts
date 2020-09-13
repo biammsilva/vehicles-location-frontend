@@ -13,7 +13,7 @@ export class MapComponent implements OnInit {
     lat: 52.53,
     lng: 13.403
   }
-  zoom: number = 15;
+  zoom: number = 12;
   vehicles: Vehicle[];
 
   constructor(

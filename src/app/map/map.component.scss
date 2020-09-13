@@ -1,3 +1,5 @@
+@import '../../_stylings/variables.scss';
+
 agm-map {
     display: block;
     margin: auto;
@@ -5,10 +7,19 @@ agm-map {
     max-width: 900px;
 }
 
+.description {
+    font-size: 25px;
+    color: $secondary-color;
+    width: 75%;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 20px 0;
+}
+
 .container {
     padding: 30px;
     margin: 0 auto;
     background-color: #fff;
     max-width: 1200px;
-    height: 80vh;
+    height: 100%;
 }
