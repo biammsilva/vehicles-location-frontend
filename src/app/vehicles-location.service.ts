@@ -13,11 +13,11 @@ export class VehiclesLocationService {
   ) { }
 
   getVehicles() {
-    return this.http.get(`${this.url}/vehicles/`)
+    return this.http.get(`${this.url}/vehicles`)
   }
 
   getLocations(vehicleId) {
-    return this.http.get(`${this.url}/vehicles/${vehicleId}/locations/`)
+    return this.http.get(`${this.url}/vehicles/${vehicleId}/locations`)
   }
 
 }

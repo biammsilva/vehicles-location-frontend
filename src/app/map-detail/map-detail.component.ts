@@ -10,14 +10,6 @@ import { VehiclesLocationService } from '../vehicles-location.service';
 })
 
 export class MapDetailComponent implements OnInit {
-  markerOptions = {
-    destination: {
-      visible: false
-    },
-    waypoints: {
-      visible: false
-    }
-  };
   zoom: number = 15
   id: string;
   locationsParsed;
@@ -32,16 +24,7 @@ export class MapDetailComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.service.getLocations(this.id).subscribe((data: Location[]) => {
       this.locations = data;
-      this.parseLocations();
     })
-  }
-
-  parseLocations() {
-    this.locationsParsed = this.locations.map((location) => {
-      return {
-        location: location
-      }
-    });
   }
 
 }

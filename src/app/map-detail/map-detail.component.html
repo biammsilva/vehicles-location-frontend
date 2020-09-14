@@ -1,6 +1,6 @@
 <div class="container">
   <div class="description">
-    Here, you can see the route that this vehicle has been.
+    Here, you can see the route that this vehicle took.
     The car indicates the last position of the vehicle.
   </div>
   <div class="map" *ngIf="locations">
@@ -16,12 +16,8 @@
         [markerClickable]="true"
         iconUrl="../../assets/images/car.png">
       </agm-marker>
-      <agm-direction
-        [waypoints]="locationsParsed"
-        [origin]="locationsParsed[0]"
-        [destination]="locationsParsed[locationsParsed.length-1]"
-        [markerOptions]="markerOptions">
-      </agm-direction>
+      <agm-polygon [paths]="locations" [geodesic]="true" [fillOpacity]="0" [strokeOpacity]="0.5"></agm-polygon>
+
     </agm-map>
   </div>
   <div class="buttons">
