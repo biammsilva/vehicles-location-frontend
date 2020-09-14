@@ -16,6 +16,7 @@ export class MapComponent implements OnInit {
   zoom: number = 12;
   vehicles: Vehicle[];
   loading = true;
+  vehiclesSearchResults: Vehicle[];
 
   constructor(
     private router: Router,
@@ -26,11 +27,23 @@ export class MapComponent implements OnInit {
     this.service.getVehicles().subscribe((data: Vehicle[]) => {
       this.loading = false;
       this.vehicles = data;
+      this.vehiclesSearchResults = data;
     });
   }
 
   openMapDetail(vehicleId) {
     this.router.navigate(['map-detail', vehicleId]);
+  }
+
+  search(event){
+    let text = event.target.value;
+    if(text===""){
+      this.vehiclesSearchResults = this.vehicles;
+    } else {
+      this.vehiclesSearchResults = this.vehicles.filter(vehicle =>
+        vehicle.id.toLowerCase().includes(text.toLowerCase())
+      );
+    }
   }
 
 }

@@ -25,4 +25,17 @@
       <div class="double-bounce2"></div>
     </div>
   </div>
+  <div *ngIf="vehicles">
+    <div class="search-box">
+      <div class="search-box-input">
+        <label>Search</label>
+        <input type="text" (keyup)="search($event)">
+      </div>
+    </div>
+    <div class="vehicles-list">
+      <div *ngFor="let vehicle of vehiclesSearchResults" class="vehicles-list-item">
+        <a class="vehicle-link" [routerLink]="['map-detail', vehicle.id]">{{vehicle.id | slice:0:8}}</a>
+      </div>
+    </div>
+  </div>
 </div>
