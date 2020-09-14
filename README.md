@@ -1,6 +1,25 @@
 # Vehicle Locations
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+Project to show the vehicles locations.
+
+## Technologies:
+
+### Angular
+
+I've choosen Angular because is the framework that I'm more fammiliar with. Also, it has the library to manage google maps only passing some parameters.
+
+### Agm - Angular google maps
+
+I've choosen google maps library to show the vehicles and plot a line in the map. I'm using:
+
+* agm-map: to show the map;
+* agm-marker: to show the last vehicle location;
+* agm-polygon: to show the path that the vehicle had took;
+
+I've tested two resources: agm-direction and agm-polygon. But agm-direction sets the route based in one destination, one origin and a list of waypoint limited to 25.
+Because of that limit, I've changed to agm-polygon, that only draws a line in the path that the vehicle was.
+
+Production url: https://vehicles-location.herokuapp.com/
 
 ## Development server
 
