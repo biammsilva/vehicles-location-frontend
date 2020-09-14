@@ -16,8 +16,16 @@
         [markerClickable]="true"
         iconUrl="../../assets/images/car.png">
       </agm-marker>
-      <agm-polygon [paths]="locations" [geodesic]="true" [fillOpacity]="0" [strokeOpacity]="0.5"></agm-polygon>
-
+      <agm-polyline [strokeOpacity]="0.5">
+        <agm-polyline-point  *ngFor="let location of locations" [latitude]="location.lat" [longitude]="location.lng">
+        </agm-polyline-point>
+      </agm-polyline>
+      <agm-marker
+        [latitude]="locations[0].lat"
+        [longitude]="locations[0].lng"
+        iconAnchorX="5"
+        iconAnchorY="5">
+      </agm-marker>
     </agm-map>
   </div>
   <div class="buttons">

@@ -7,7 +7,6 @@ import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { AgmDirectionModule } from 'agm-direction';
 import { MapDetailComponent } from './map-detail/map-detail.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -26,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBpRtP8tNUx7k0oROtPEnsVfroGgWZFyxg'
     }),
-    AgmDirectionModule,
     HttpClientModule
   ],
   providers: [],
