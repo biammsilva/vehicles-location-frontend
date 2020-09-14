@@ -6,15 +6,17 @@
   <div class="map" *ngIf="vehicles">
     <agm-map [latitude]="officeCoordinates.lat" [zoom]="zoom" [longitude]="officeCoordinates.lng">
       <agm-marker  [latitude]="officeCoordinates.lat" [longitude]="officeCoordinates.lng"></agm-marker>
-      <agm-marker *ngFor="let vehicle of vehicles"
-        [latitude]="vehicle.last_lat"
-        [longitude]="vehicle.last_lng"
-        iconAnchorX="5"
-        iconAnchorY="5"
-        [markerClickable]="true"
-        (markerClick)="openMapDetail(vehicle.id)"
-        iconUrl="../../assets/images/car.png">
-      </agm-marker>
+      <agm-marker-cluster imagePath="/assets/images/cluster-markers/m" imageExtension="png" [ignoreHidden]="true">
+        <agm-marker *ngFor="let vehicle of vehicles"
+          [latitude]="vehicle.last_lat"
+          [longitude]="vehicle.last_lng"
+          iconAnchorX="5"
+          iconAnchorY="5"
+          [markerClickable]="true"
+          (markerClick)="openMapDetail(vehicle.id)"
+          iconUrl="/assets/images/car.png">
+        </agm-marker>
+      </agm-marker-cluster>
     </agm-map>
   </div>
   <div class="loading-message" *ngIf="loading">

@@ -14,10 +14,10 @@ I've choosen google maps library to show the vehicles and plot a line in the map
 
 * agm-map: to show the map;
 * agm-marker: to show the last vehicle location;
-* agm-polygon: to show the path that the vehicle had took;
+* agm-polyline: to show the path that the vehicle had took;
 
-I've tested two resources: agm-direction and agm-polygon. But agm-direction sets the route based in one destination, one origin and a list of waypoint limited to 25.
-Because of that limit, I've changed to agm-polygon, that only draws a line in the path that the vehicle was.
+I've tested two resources: agm-direction and agm-polyline. But agm-direction sets the route based in one destination, one origin and a list of waypoint limited to 25.
+Because of that limit, I've changed to agm-polyline, that only draws a line in the path that the vehicle was.
 
 Production url: https://vehicles-location.herokuapp.com/
 
