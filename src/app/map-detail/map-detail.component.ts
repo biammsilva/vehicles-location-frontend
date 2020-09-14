@@ -14,6 +14,7 @@ export class MapDetailComponent implements OnInit {
   id: string;
   locationsParsed;
   locations: Location[];
+  loading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +25,7 @@ export class MapDetailComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.service.getLocations(this.id).subscribe((data: Location[]) => {
       this.locations = data;
+      this.loading = false;
     })
   }
 

@@ -1,4 +1,5 @@
 @import '../../_stylings/variables.scss';
+@import '../../_stylings/spinner.scss';
 
 agm-map {
     display: block;
@@ -22,4 +23,8 @@ agm-map {
     background-color: #fff;
     max-width: 1200px;
     height: 100%;
+}
+
+.loading-message {
+    margin: 0 auto;
 }

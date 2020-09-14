@@ -15,6 +15,7 @@ export class MapComponent implements OnInit {
   }
   zoom: number = 12;
   vehicles: Vehicle[];
+  loading = true;
 
   constructor(
     private router: Router,
@@ -23,8 +24,9 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getVehicles().subscribe((data: Vehicle[]) => {
+      this.loading = false;
       this.vehicles = data;
-    })
+    });
   }
 
   openMapDetail(vehicleId) {

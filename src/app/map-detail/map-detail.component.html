@@ -2,6 +2,7 @@
   <div class="description">
     Here, you can see the route that this vehicle took.
     The car indicates the last position of the vehicle.
+    The red marker indicates the origin point.
   </div>
   <div class="map" *ngIf="locations">
     <agm-map 
@@ -27,6 +28,12 @@
         iconAnchorY="5">
       </agm-marker>
     </agm-map>
+  </div>
+  <div class="loading-message" *ngIf="loading">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
   </div>
   <div class="buttons">
     <a [routerLink]="['/']" class="button-back">Back</a>

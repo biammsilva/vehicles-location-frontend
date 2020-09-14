@@ -1,4 +1,5 @@
 @import '../../_stylings/variables.scss';
+@import '../../_stylings/spinner.scss';
 
 agm-map {
     display: block;
@@ -24,24 +25,41 @@ agm-map {
     height: 100%;
 }
 
-.button-back {
-    position: relative;
-    margin: 1em;
-    font-weight: 100;
-    padding: 1em 1.25em;
-    text-align: center;
-    width: 200px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    background: $primary-color;
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
+.buttons {
+
+    .button-back {
+        position: relative;
+        font-weight: 100;
+        padding: 1em 1.25em;
+        text-align: center;
+        width: 200px;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 0;
+        cursor: pointer;
+        background: $primary-color;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        display: block;
+        margin: 10px auto;
+
+        &:hover {
+          background: darken($primary-color,2.5%);
+        }
+    }
+}
+
+.loading-message {
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .description {
+        width: 100%;
+    }
     
-    &:hover {
-      background: darken($primary-color,2.5%);
+    .button-back {
+        width: 100%;
     }
 }

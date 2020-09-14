@@ -1,9 +1,9 @@
 <div class="container">
   <div class="description">
-    Here, you can see all the veihcles that are being monitored.
+    Here, you can see all the vehicles that are being monitored in its last position.
     You can click in the vehicle that you want to see the details.
   </div>
-  <div class="map">
+  <div class="map" *ngIf="vehicles">
     <agm-map [latitude]="officeCoordinates.lat" [zoom]="zoom" [longitude]="officeCoordinates.lng">
       <agm-marker  [latitude]="officeCoordinates.lat" [longitude]="officeCoordinates.lng"></agm-marker>
       <agm-marker *ngFor="let vehicle of vehicles"
@@ -16,5 +16,11 @@
         iconUrl="../../assets/images/car.png">
       </agm-marker>
     </agm-map>
+  </div>
+  <div class="loading-message" *ngIf="loading">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
   </div>
 </div>
