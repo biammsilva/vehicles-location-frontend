@@ -35,13 +35,57 @@ agm-map {
     }
     
 }
-@media only screen and (max-width: 600px) {
-    .description {
-        width: 100%;
+
+.search-box {
+    width: 75%;
+    margin: 0 auto;
+
+    label {
+        padding: 3px;
+        font-size: medium;
     }
-    
+
+    &-input {
+        float: left;
+        margin: 10px;
+        border-radius: 6px;
+        border-width: 1px;
+        font-size: 20px;
+    }
 }
-@media only screen and (max-width: 600px) {
+
+
+.vehicles-list {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        padding: 8px;
+        margin: 5px;
+        width: 22%;
+        text-align: center;
+    }
+}
+
+.vehicle-link {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    margin: 0 auto;
+    padding: 7px 1px;
+    border-radius: 5px;
+
+    &:hover {
+      background: #ccc;
+    }
+}@media only screen and (max-width: 600px) {
     .description {
         width: 100%;
     }
